@@ -61,6 +61,7 @@ def but1(req):
 			a="TSLast.xlsx"
 			df=pd.read_excel("TSLast.xlsx")
 		print(a)
+		print("hello")
 		df1=df["inst_name"]
 		df1= df1.values.tolist()
 		df1.sort()
@@ -89,6 +90,7 @@ def table(req):
 		else:
 			caste=caste+' '+'GIRLS'
 		rk=rank
+		
 		if (rank<=10000):
 			rank=10000
 			rank1=1
