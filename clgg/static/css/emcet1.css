@@ -1,0 +1,137 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Lalo',sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background:#ecf0f3;
+}
+.login-div {
+  width:430px;
+  height: 700px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1,
+              -13px -13px 20px #ffffff;}
+
+.logo img {
+  width:100px;
+  height: 100px;
+  top:50%;
+  margin-right: auto;
+  border-radius: 50%;
+  margin:0 auto;
+  box-shadow: 
+  /* logo shadow */
+  0px 0px 2px #5f5f5f,
+  /* offset */
+  0px 0px 0px 5px #ecf0f3,
+  /*bottom right */
+  8px 50px 15px #a7aaaf,
+  /* top left */
+  -8px -8px 25px #ffffff
+  ;
+}
+
+.title {
+  text-align: center;
+  padding-left: 50%;
+  font-size: 28px;
+  padding-top: 0px;
+  letter-spacing: 0.5px;
+}
+
+.fields {
+  width: 100%;
+  padding: 35px 5px 5px 5px;
+}
+.fields input {
+  border: none;
+  outline:none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding:20px 10px 20px 5px;
+}
+.Rank {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+}
+.due{
+
+  width:15vw;
+  justify-content: center;
+  text-align: center;
+  padding:10px 30px 15px 30px;
+  margin-left: center;
+  margin-bottom: 0.5px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}
+ .due1{
+  width:15vw;
+  justify-content: center;
+  text-align: center;
+  padding:10px 30px 15px 30px;
+  margin-left: center;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}  
+
+ .due2{
+  width:15vw;
+  justify-content: center;
+  text-align: center;
+  padding:10px 30px 15px 30px;
+  margin-left: center;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}                        
+
+.fields svg {
+  height: 22px;
+  margin:0 10px -3px 25px;
+}
+
+.fields svg {
+  height: 22px;
+  margin:0 10px -3px 25px;
+}
+
+.signin-button {
+  outline: none;
+  border:none;
+  cursor: pointer;
+  width:100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color:#fff;
+  text-align: center;
+  background: #24cfaa;
+  box-shadow: 3px 3px 8px #b1b1b1,
+              -3px -3px 8px #ffffff;
+  transition: 0.5s;
+}
+
+.signin-button:hover {
+  background:#2fdbb6;
+}
+.signin-button:active {
+  background:#ffffff;
+}

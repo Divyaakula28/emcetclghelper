@@ -1,0 +1,163 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Lalo',sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background:#ecf0f3;
+}
+.login-div {
+  width:430px;
+  height: 710px;
+  padding: 35px 35px 65px 45px;
+  border-radius: 50px;
+  background: #ecf0f3;
+  box-shadow: 13px 23px 20px #cbced1,
+              -13px -13px 30px #ffffff;}
+
+ .logo img{
+  width:100px;
+  height: 100px;
+  top:50%; 
+  margin-right: auto;
+  border-radius: 50%;
+  margin:0 auto;
+  box-shadow: 
+  /* logo shadow */
+  0px 0px 2px #5f5f5f,
+  /* offset */
+  0px 0px 0px 5px #ecf0f3,
+  /*bottom right */
+  8px 50px 15px #a7aaaf,
+  /* top left */
+  -8px -8px 25px #ffffff
+  ;
+}  
+.title {
+  text-align: center;
+  padding-left: 50%;
+  font-size: 28px;
+  padding-top: 0px;
+  letter-spacing: 0.5px;
+}
+.fields {
+  width: 100%;
+  padding: 35px 5px 5px 5px;
+}
+.fields input {
+  border: none;
+  outline:none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding:5px 10px 20px 5px;
+}
+.Rank {
+  width:15vw;
+  padding:1px 50px 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+}
+.due{
+
+  width:15vw;
+    padding:5px 90px 5px 10px;
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-top: 15px;
+  margin-bottom: 0.5px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}
+ .due1{
+  width:15vw;
+    padding:5px 90px 5px 10px;
+
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}  
+
+ .due2{
+  width:15vw;
+  padding:5px 90px 5px 10px;
+
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-bottom: 2px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;}   
+.hii3{
+  width:15vw;
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-top: 1px;
+  margin-bottom: 2px;}             
+ .due3{
+  width:15vw;
+  padding:0.1px 90px 5px 50px;
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-bottom: 2px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;} 
+ .hii2, .hii, .hii1{
+  width:15vw;
+  justify-content: center;
+  text-align: center;
+  margin-left: center;
+  margin-bottom: 0.1px;}                                                  
+.fields svg {
+  height: 22px;
+  margin:0 10px -3px 25px;
+}
+
+.fields svg {
+  height: 22px;
+  margin:0 10px -3px 25px;
+}
+
+.signin-button {
+  outline: none;
+  border:none;
+  cursor: pointer;
+  width:70%;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color:#fff;
+  text-align: center;
+  margin-top: 5px;
+  background: #24cfaa;
+   margin-top:0.00000000001px;
+  box-shadow: 3px 3px 8px #b1b1b1,
+              -3px -3px 8px #ffffff;
+}
+
+.signin-button:hover {
+  background:#2fdbb6;
+}
+.signin-button:active {
+  background:#ff0000;
+}           
