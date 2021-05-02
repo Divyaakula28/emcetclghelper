@@ -139,10 +139,12 @@ def table(req):
 		if state=="AP-2019":
 			df=pd.read_excel("emcetclghelper/clgg/AP2018.xlsx")
 			print(branch,df)
+			
 		elif state=="TS-1st phase":
 			df=pd.read_excel("TSFirst.xlsx")
 		else:
 			df=pd.read_excel("TSLast.xlsx")
+		print(caste)	
 		df1=(df[(df[caste]<=rank)&(df[caste]>=rank1)&(df["branch_ code"]==branch)])[["inst_code","inst_name","branch_ code",caste,"PLACE","DIST"]]
 		df1.sort_values([caste], ascending=[True], inplace=True)
 		df1=df1.values.tolist()
