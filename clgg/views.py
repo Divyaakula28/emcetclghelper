@@ -137,7 +137,7 @@ def table(req):
 				continue
 		print(branch,caste,rank)
 		if state=="AP-2019":
-			df=pd.read_excel("/clgg/AP2018.xlsx")
+			df=pd.read_excel("AP2018.xlsx")
 			print(branch,df)
 			
 		elif state=="TS-1st phase":
