@@ -138,6 +138,7 @@ def table(req):
 		print(branch,caste,rank)
 		if state=="AP-2019":
 			df=pd.read_excel("emcetclghelper/clgg/AP2018.xlsx")
+			print(branch,df)
 		elif state=="TS-1st phase":
 			df=pd.read_excel("TSFirst.xlsx")
 		else:
