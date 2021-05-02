@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	 <link rel="stylesheet" type="text/css" href="{%static 'css/table.css'%}">
+	 <form action="{% url 'findurclg' %}" method="POST">
+            {% csrf_token %}
+
+<body>
+<script type="text/javascript">
+	var k={{df1|safe}};
+	var r={{r|safe}};
+	var c="{{caste|safe}}";
+
+	document.write("<table class=\"center\"><tr><th>College Code</th><th>College Name</th><th>Branch</th><th>"+c+"</th><th>PLACE</th><th>DIST</th>")
+	for (var i in Object.keys(k)){
+		if (k[i][3]==r[0] || k[i][3]==r[1] || k[i][3]==r[2] || k[i][3]==r[3]){
+			document.write("<tr class=\"content-table\" style=\"color: #DC143C\"><td >"+k[i][0]+"</td><td>"+k[i][1]+"</td><td>"+k[i][2]+"</td><td>"+k[i][3]+"</td><td>"+k[i][4]+"</td><td>"+k[i][5]+"</td></tr>");}
+		else{
+			document.write("<tr class=\"content-table\" style=\"color:blue\"><td >"+k[i][0]+"</td><td>"+k[i][1]+"</td><td>"+k[i][2]+"</td><td>"+k[i][3]+"</td><td>"+k[i][4]+"</td><td>"+k[i][5]+"</td></tr>");}}
+	document.write("<tr><td><input type=\"submit\" id='butn' class=\"btn\" value=\"&#8592 BACK\"></input></td></tr>");
+	window.scrollTo(0,document.body.scrollHeight);
+</script>
+<marquee behavior="scroll" direction="left" style="font-size=30px">For more details contact "divya.akula001@gmail.com"</marquee>
+</body>
+</html>

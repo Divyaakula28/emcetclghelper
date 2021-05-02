@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>emcet</title>
+	 <link rel="stylesheet" type="text/css" href="{%static 'css/emcet.css'%}">
+
+
+</head>
+
+<body>
+ <form action="{% url 'but1' %}" method="POST" style="color:blue,text:center">
+            {% csrf_token %}
+<div class="login-div">
+  <div class="logo">
+  <img src="{% static 'images/emcetb.jpg' %}"> </div>
+  <div class="title">SELECT STATE</div>
+  <div class="fields">
+
+    <p class="hii3">select state</p>
+    <select id="state" name="state" class="due3" value="caste">                  
+                <option value="AP-2019" selected="selected">AP-2019</option>
+                <option value="TS-1st phase">TS-1st phase</option>
+                <option value="TS-last phase">TS-last phase</option>
+      </select>
+
+  </div>
+
+
+ <button class="signin-button">Check</button>
+</div>
+</body>
+</html>

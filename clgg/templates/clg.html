@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>emcet</title>
+	 <link rel="stylesheet" type="text/css" href="{%static 'css/emcet2.css'%}">
+
+
+</head>
+
+<body>
+ <form action="{% url 'table1' %}" method="POST" style="color:blue,text:center">
+            {% csrf_token %}
+<div class="login-div">
+  <div class="logo">
+  <img src="{% static 'images/emcetb.jpg' %}"> </div>
+  <div class="title">SEARCH</div>
+  <div class="fields">
+  </div>
+  <p class="hii" value=k> Select College Name</p>
+      <select id="clg" name="clg" class="due" value="clg"></select>
+  <p class="hii2">Gender:</p>
+      <select id="gender" name="gender" class="due2" value="gender">                  
+                <option value="MALE" selected="selected">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+      </select><br></br>
+    <p class="hii1"> Select Caste:</p>
+      <select id="branch1" name="branch1" class="due1" value="branch1"></select>
+  <script>
+    df={{df1|safe}};
+    var select=document.getElementById("clg"),
+          arr=df;
+    for(var i=0;i<=arr.length-1;i++){
+    	var option=document.createElement("OPTION"),
+    	   txt=document.createTextNode(arr[i]);
+    	option.appendChild(txt);
+    	option.setAttribute("value",arr[i]);
+    	clg.insertBefore(option,clg.lastChild);
+    }
+    var select=document.getElementById("branch1"),
+      arr=['OC','SC','ST','BC_A','BC_B','BC_C','BC_D','BC_E'];
+    for(var i=0;i<=arr.length-1;i++){
+      var option=document.createElement("OPTION"),
+         txt=document.createTextNode(arr[i]);
+      option.appendChild(txt);
+      option.setAttribute("value",arr[i]);
+      branch1.insertBefore(option,branch1.lastChild);
+    }
+  </script>
+  <button class="signin-button">Check</button>
+</div>
+</body>
+</html>

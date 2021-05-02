@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>emcet</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/button.css'%}">
+
+</head>
+<body>
+<form action="{% url 'test' %}" method="POST">
+            {% csrf_token %}
+<input type="submit" class="ts-first" name="Rank based college list" value="Rank based college list" /><br></br></form>
+<form action="{% url 'findurclg' %}" method="POST">
+            {% csrf_token %}
+<input type="submit" class="ap" name="Individual college cutoff" value="Individual college rank" /><br></br></form>
+
+
+
+</body>
+</html>

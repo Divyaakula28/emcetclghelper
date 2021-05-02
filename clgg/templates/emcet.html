@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+      <link rel="stylesheet" type="text/css" href="{%static 'css/emcet.css'%}">
+
+</head>
+
+<body>
+ <form action="{% url 'table' %}" method="POST" style="color:blue,text:center">
+            {% csrf_token %}
+<div class="login-div">
+  <div class="logo">
+  <img src="{% static 'images/emcetb.jpg' %}"> </div>
+  <div class="title">Find your College</div>
+  <div class="fields">
+    <p class="hii4">Enter your emcet rank:</p>
+    <div class="Rank"><input type="number" name="Rank" class="user-input" value="1" placeholder="rank" min="1" /></div>
+    <p class="hii3">Select State :</p>
+    <select id="state" name="state" class="due3" value="caste">                  
+                <option value="AP-2019" selected="selected">AP-2019</option>
+                <option value="TS-1st phase">TS-1st phase</option>
+                <option value="TS-last phase">TS-last phase</option>
+      </select>
+    <p class="hii"> Select Branch Name:</p>
+      <select id="branch" name="branch" class="due" value="branch"></select>
+    <p class="hii2">Gender:</p>
+      <select id="gender" name="gender" class="due2" value="gender">                  
+                <option value="MALE" selected="selected">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+      </select><br></br>
+    <p class="hii1"> Select Caste:</p>
+      <select id="branch1" name="branch1" class="due1" value="branch1"></select>
+
+
+
+
+
+  </div>
+  <script>
+    var select=document.getElementById("branch"),
+      arr=['COMPUTER SCIENCE  AND  ENGINEERING', 'ELECTRONICS AND COMMUNICATION ENGINEERING', 'ELECTRICAL AND ELECTRONICS ENGINEERING', 'MECHANICAL ENGINEERING', 'CIVIL ENGINEERING', 'INFORMATION TECHNOLOGY', 'MINING ENGINEERING', 'BIO\xadMEDICAL ENGINEERING', 'CHEMICAL ENGINEERING', 'PHARMACEUTICAL ENGINEERING', 'AGRICULTURAL ENGINEERING', 'BIO\xadTECHNOLOGY', 'INDUSTRIAL PRODUCTION ENGINEERING', 'PHARM \xad D (M.P.C. STREAM)', 'DAIRYING', 'FOOD SCIENCE', 'COMPUTER SCIENCE AND INFORMATION TECHNOLOGY', 'ELECTRONICS AND INSTRUMENTATION ENGINEERING', 'ARTIFICIAL INTELLIGENCE', 'ELECTRONICS AND TELEMATICS', 'AERONAUTICAL ENGINEERING', 'ELECTRONICS AND COMPUTER ENGINEERING', 'DIGITAL TECHNIQUES FOR DESIGN AND PLANNING', 'FACILITIES AND SERVICES PLANNING', 'PLANNING', 'METALLURGICAL ENGINEERING', 'BTECH MECHANICAL  WITH MTECH MANUFACTURING SYSTEMS', 'BTECH MECHANICAL  WITH MTECH THERMAL ENGG', 'COMPUTER SCIENCE & ENGINEERING (NETWORKS)', 'ELECTRONICS COMMUNICATION AND INSTRUMENTATION ENGINEERING', 'MECHANICAL (MECHTRONICS) ENGINEERING', 'METALLURGY AND MATERIAL ENGINEERING', 'INFORMATION TECHNOLOGY AND ENGINEERING', 'AUTOMOBILE ENGINEERING', 'FOOD PROCESSING TECHNOLOGY', 'TEXTILE TECHNOLOGY', 'COMPUTER ENGINEERING', 'COMPUTER SCIENCE AND BUSINESS SYSTEM']
+;
+    for(var i=0;i<=arr.length-1;i++){
+      var option=document.createElement("OPTION"),
+         txt=document.createTextNode(arr[i]);
+      option.appendChild(txt);
+      option.setAttribute("value",arr[i]);
+      branch.insertBefore(option,branch.lastChild);
+    }
+    var select=document.getElementById("branch1"),
+      arr=['OC','SC','ST','BC_A','BC_B','BC_C','BC_D','BC_E'];
+    for(var i=0;i<=arr.length-1;i++){
+      var option=document.createElement("OPTION"),
+         txt=document.createTextNode(arr[i]);
+      option.appendChild(txt);
+      option.setAttribute("value",arr[i]);
+      branch1.insertBefore(option,branch1.lastChild);
+    }
+
+  </script>
+  <button class="signin-button">Check</button>
+</div>
+</body>
+</html>
