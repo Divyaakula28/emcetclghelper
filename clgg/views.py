@@ -137,7 +137,7 @@ def table(req):
 				continue
 		print(branch)
 		if state=="AP-2019":
-			df=pd.read_excel("AP2018.xlsx")
+			df=pd.read_excel("mcetclghelper/clgg/AP2018.xlsx")
 		elif state=="TS-1st phase":
 			df=pd.read_excel("TSFirst.xlsx")
 		else:
