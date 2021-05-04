@@ -24,7 +24,7 @@ def findurclg(req):
 		print('user exist')	
 	else:
 		u.save()
-		#print('user')
+		print('user')
 	count=User.objects.all().count()	
 	print("totoal users",count)	
 	if 'Individual college cutoff' in req.POST:
@@ -66,7 +66,7 @@ def but1(req):
 		df1= df1.values.tolist()
 		df1.sort()
 		#df1= list(dict.fromkeys(df1))
-		print(df1)
+		#print(df1)
 		req.session['ste']=a
 		return render(req,'clg.html',{'df1':df1,'a':a})
 	return render(req,'state1.html')
@@ -150,7 +150,7 @@ def table(req):
 		df1=df1.values.tolist()
 		r=[]
 		s=[]
-		print(len(df1))
+		#print(len(df1))
 		for i in range(len(df1)):
 			k=int(df1[i][3])
 			if k>=rk:
