@@ -24,7 +24,7 @@ def findurclg(req):
 		print('user exist')	
 	else:
 		u.save()
-		print('user')
+		#print('user')
 	count=User.objects.all().count()	
 	print("totoal users",count)	
 	if 'Individual college cutoff' in req.POST:
@@ -34,18 +34,18 @@ def findurclg(req):
 def table1(req):
 	if req.method=="POST":
 		clg=req.POST['clg']
-		print(clg)
 		gender=req.POST['gender']
 		caste=req.POST['branch1']
 		if(gender=='MALE'):
 			caste=caste+' '+'BOYS'
 		else:
 			caste=caste+' '+'GIRLS'
+		print(clg,gender,caste)	
 		a=req.session.get('ste')
 		df=pd.read_excel(a)
 		df1=(df[(df["inst_name"]==clg)])[["inst_code","inst_name","branch_ code",caste,"DIST","PLACE"]]
 		df1=df1.values.tolist()
-		print(df1)
+		#print(df1)
 		return render(req,'table1.html',{'df1':df1,'c':caste})
 	return render(req,'buttonap.html')
 def but1(req):
@@ -60,12 +60,12 @@ def but1(req):
 		else:
 			a="TSLast.xlsx"
 			df=pd.read_excel("TSLast.xlsx")
-		print(a)
-		print("hello")
+		#print(a)
+		#print("hello")
 		df1=df["inst_name"]
 		df1= df1.values.tolist()
 		df1.sort()
-		df1= list(dict.fromkeys(df1))
+		#df1= list(dict.fromkeys(df1))
 		print(df1)
 		req.session['ste']=a
 		return render(req,'clg.html',{'df1':df1,'a':a})
@@ -160,7 +160,7 @@ def table(req):
 		r=r[:2]
 		s=s[-2:]
 		r.extend(s)
-		print(r)
+		#print(r)
 		return render(req,"table.html",{'df1':df1,'r':r,'caste':caste})
 
 	return HttpResponse("hiii")
