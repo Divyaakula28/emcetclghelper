@@ -65,7 +65,7 @@ def but1(req):
 		df1=df["inst_name"]
 		df1= df1.values.tolist()
 		df1.sort()
-		#df1= list(dict.fromkeys(df1))
+		df1= list(dict.fromkeys(df1))
 		#print(df1)
 		req.session['ste']=a
 		return render(req,'clg.html',{'df1':df1,'a':a})
